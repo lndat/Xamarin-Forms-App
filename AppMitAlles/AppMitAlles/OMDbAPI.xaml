@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.OMDbAPI"
+             BackgroundColor="Azure">
+    <ContentPage.Content>
+        <Frame>
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="PaleGreen"
+                          Offset="0.1" />
+                    <GradientStop Color="PaleVioletRed"
+                          Offset="0.2" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <StackLayout>
+
+                <StackLayout>
+                    <Entry Placeholder="enter a name!" HorizontalTextAlignment="Center" x:Name="entryName" />
+                    <Button Text="OK" HorizontalOptions="Center" x:Name="jsonBtn" Clicked="jsonBtn_Clicked" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}"/>
+                </StackLayout>
+                <Frame BackgroundColor="AntiqueWhite" BorderColor="Black">
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="0" Grid.Column="0" Text="Title:" FontAttributes="Bold"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="0" Grid.Column="1" Text="-" x:Name="labelTitle"  Grid.ColumnSpan="2"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="1" Grid.Column="0" Text="Country:" FontAttributes="Bold"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="1" Grid.Column="1" Text="-" x:Name="labelCountry"  Grid.ColumnSpan="2"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="2" Grid.Column="0" Text="Year:" FontAttributes="Bold"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="2" Grid.Column="1" Text="-" x:Name="labelYear"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="3" Grid.Column="0" Text="Genre:" FontAttributes="Bold"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="3" Grid.Column="1" Text="-" x:Name="labelGenre" Grid.ColumnSpan="3"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="4" Grid.Column="0" Text="IMDB:" FontAttributes="Bold"/>
+                        <Label FontSize="15" TextColor="Black" Grid.Row="4" Grid.Column="1" Text="-" x:Name="labelIMDB"/>
+                    </Grid>
+                </Frame>
+                <Image x:Name="imgPoster" WidthRequest="150" HeightRequest="215" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

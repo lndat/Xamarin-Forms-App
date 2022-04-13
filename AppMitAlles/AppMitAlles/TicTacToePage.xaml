@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.TicTacToePage"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Content>
+        <StackLayout Margin="10" VerticalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Player 1: (0)" Grid.Row="0" Grid.Column="0" Margin="5" x:Name="p1Text"/>
+                <Label Text="Player 2: (0)" Grid.Row="0" Grid.Column="2" Margin="5" HorizontalTextAlignment="End" x:Name="p2Text"/>
+
+                <Button x:Name="button1" Text="" Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button2" Text="" Grid.Row="1" Grid.Column="1" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button3" Text="" Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button4" Text="" Grid.Row="2" Grid.Column="0" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button5" Text="" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button6" Text="" Grid.Row="2" Grid.Column="2" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button7" Text="" Grid.Row="3" Grid.Column="0" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button8" Text="" Grid.Row="3" Grid.Column="1" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+                <Button x:Name="button9" Text="" Grid.Row="3" Grid.Column="2" BackgroundColor="Gray" Clicked="buttonsClicked"/>
+            </Grid>
+            <StackLayout x:Name="gameOverStackLayout" IsVisible="false">
+                <Label Text="" HorizontalTextAlignment="Center"/>
+                <Button Text="Play again" Clicked="Button_Clicked" x:Name="gameOverButton"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

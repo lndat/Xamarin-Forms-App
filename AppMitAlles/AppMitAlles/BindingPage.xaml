@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.BindingPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout 
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="260"
+                HeightRequest="220"
+                Margin="60"
+                BackgroundColor="PaleGreen"
+                BindingContext="{x:Reference sliderOne}"
+                Rotation="{Binding Value}">
+
+                <Label 
+                x:Name="roateLabel"
+                Text="{Binding Value, StringFormat='Dreh dich! {0:F2}'}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="20"
+                Margin="60"
+                BindingContext="{x:Reference sliderOne}"/>
+            </StackLayout>
+            <StackLayout Margin="30">
+                <Entry 
+                Placeholder="Was?" x:Name="eingabeRotation" Text=""/>
+            </StackLayout>
+            <StackLayout
+                Margin="20">
+                <Slider 
+                x:Name="sliderOne"
+                Minimum="0" 
+                Maximum="360" 
+                Value="{Binding Text}"
+                MinimumTrackColor="Green"
+                MaximumTrackColor="Red"
+                BindingContext="{x:Reference eingabeRotation}"
+                />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

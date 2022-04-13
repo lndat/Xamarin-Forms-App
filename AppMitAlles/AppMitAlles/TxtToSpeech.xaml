@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.TxtToSpeech"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Entry Placeholder="text eingeben.." x:Name="textInput" HorizontalTextAlignment="Center"/>
+            <Button Text="Ok" x:Name="speechButton" Clicked="speechButton_Clicked" HorizontalOptions="Center" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.EasterEggMitLabels"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <Grid Margin="20,20,20,20" BackgroundColor="White" x:Name="GridColor">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Value, StringFormat='{0:F2}%'}" BindingContext="{x:Reference sliderOne}" FontSize="20" BackgroundColor="Green" Grid.Column="0" HorizontalTextAlignment="Center"/>
+            <Label Text="Label2" x:Name="randomTextLabel" FontSize="20" BackgroundColor="Red" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Center"/>
+            <Button Text="Button1" x:Name="randomButton" Grid.Row="1" Grid.Column="0" BackgroundColor="Yellow" FontSize="30" Clicked="randomButton_Clicked"></Button>
+            <Button Text="" x:Name="easterEggButton" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" FontSize="30" Clicked="easterEggButton_Clicked"></Button>
+            <Slider x:Name="sliderOne" Minimum="0" Maximum="100" Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="AntiqueWhite" VerticalOptions="EndAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

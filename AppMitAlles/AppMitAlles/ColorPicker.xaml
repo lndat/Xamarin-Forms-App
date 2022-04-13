@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppMitAlles.ColorPicker"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView
+             WidthRequest="260"
+             HeightRequest="190"
+             VerticalOptions="Start"
+             HorizontalOptions="Center"
+             Margin="20"
+             x:Name="colorBox"/>
+            <StackLayout>
+                <Slider Margin="9" Minimum="0" Maximum="1" BackgroundColor="DarkRed" x:Name="rSlider" Value="0" ValueChanged="rSlider_ValueChanged"/>
+                <Slider Margin="9" Minimum="0" Maximum="1" BackgroundColor="Green" x:Name="gSlider" Value="0" ValueChanged="gSlider_ValueChanged"/>
+                <Slider Margin="9" Minimum="0" Maximum="1" BackgroundColor="Blue" x:Name="bSlider" Value="0" ValueChanged="bSlider_ValueChanged"/>
+                <Slider Margin="9" Minimum="0" Maximum="1" BackgroundColor="Silver" Value="1" x:Name="occuSlider" ValueChanged="occuSlider_ValueChanged"/>
+                <Slider Margin="9" Minimum="0" Maximum="180" Value="0" BackgroundColor="Black" x:Name="rotoSlider" ValueChanged="rotoSlider_ValueChanged"/>
+                <Slider Margin="9" Minimum="0" Maximum="100" Value="0" BackgroundColor="DarkGray" x:Name="kanteRundSlider" ValueChanged="kanteRundSlider_ValueChanged"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

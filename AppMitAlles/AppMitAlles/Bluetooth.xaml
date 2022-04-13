@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.Bluetooth">
+    <ContentPage.Content>
+        <Frame>
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0) -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="PaleGreen"
+                          Offset="0.1" />
+                    <GradientStop Color="PaleVioletRed"
+                          Offset="0.2" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="111"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Grid.Row="0" Text="BluetoothLE" HorizontalOptions="Center" FontSize="20"/>
+                    <Label x:Name="bluetoothLabel" Grid.Column="1" Grid.Row="1" Text="" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Button Grid.Column="0" Grid.Row="1" Text="SCAN" IsEnabled="True" Clicked="ButtonScan_Clicked"/>
+                    <Button Grid.Column="2" Grid.Row="1" Text="CONNECT" Clicked="ButtonConnect_Clicked"/>
+                    <Button Grid.Column="1" Grid.Row="3" IsEnabled="False" Text="UP"/>
+                    <Button Grid.Column="0" Grid.Row="4" IsEnabled="False" Text="LEFT"/>
+                    <Button Grid.Column="2" Grid.Row="4" IsEnabled="False" Text="RIGHT"/>
+                    <Button Grid.Column="1" Grid.Row="5" IsEnabled="False" Text="DOWN"/>
+                    <ListView Grid.Row="6" Grid.ColumnSpan="3" SelectionMode="Single" x:Name="deviceListView">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell TextColor="Black" DetailColor="Red" Text="{Binding Name}" Detail="{Binding Uuid}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+        </StackLayout>
+            </Frame>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="MainColor">PaleGreen</Color>
+            <Color x:Key="SecColor">PaleVioletRed</Color>
+            <Color x:Key="TextColor">FloralWhite</Color>
+            <Color x:Key="BackSwitcherColor">#2196F3</Color>
+            <Color x:Key="BackgroundColor">White</Color>
+            <Style x:Key="ButtonStyleSetter" TargetType="Button" ApplyToDerivedTypes="False">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="DarkSlateGray"/>
+                <Setter Property="CornerRadius" Value="19"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="BorderColor" Value="Black" />
+            </Style>
+            <Style x:Key="DarkMode" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

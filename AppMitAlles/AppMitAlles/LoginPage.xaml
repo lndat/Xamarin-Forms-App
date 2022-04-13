@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.LoginPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="PaleTurquoise">
+
+            <StackLayout BackgroundColor="PaleGreen" 
+                             Margin="50">
+                <StackLayout Margin="20">
+                <Label Text="Login" 
+                     HorizontalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="20"/>
+
+                <Label Text="Username"
+                     TextColor="Black"
+                     VerticalOptions="EndAndExpand"
+                     HorizontalOptions="Center"/>
+                <Entry Placeholder="Username" 
+                     VerticalOptions="CenterAndExpand"
+                     x:Name="userLogin"/>
+
+                <Label Text="Password" 
+                     TextColor="Black"
+                     VerticalOptions="EndAndExpand"
+                     HorizontalOptions="Center"/>
+                <Entry Placeholder="**********"
+                     IsPassword="true"
+                     VerticalOptions="StartAndExpand"
+                     ClearButtonVisibility="WhileEditing"
+                     x:Name="passLogin"/>
+
+                <Button Text="Login" BackgroundColor="PaleVioletRed"
+                    CornerRadius="10"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Center"
+                    x:Name="Loginer"
+                    Clicked="Loginer_Click"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Switch IsToggled="false" 
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="loginSwitch"
+                        Toggled="loginSwitch_Toggled"
+                        OnColor="Green"/>
+                    <Label x:Name="loginText" Text="Save logindata" 
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <Label Text="" 
+               x:Name="StatusText"
+                     TextColor="Black"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

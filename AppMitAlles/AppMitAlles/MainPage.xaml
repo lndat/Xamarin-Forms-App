@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMitAlles.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- (Applevel od Pagelevel) Befinden sich im App.xaml(Applevel), da von dort immer erreichbar auch über codebehind (style)-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Meine Projeke" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <Frame>
+        <Frame.Background>
+            <!-- StartPoint defaults to (0,0) -->
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="PaleGreen"
+                          Offset="0.1" />
+                <GradientStop Color="PaleVioletRed"
+                          Offset="0.2" />
+            </LinearGradientBrush>
+        </Frame.Background>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="Login App" x:Name="loginPageButton" Clicked="loginPageButton_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="Numbers++" x:Name="numbersGameButton" Clicked="numbersGameButton_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="BindingPage" x:Name="bindingPageButton" Clicked="bindingPageButton_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="TicTacToe" x:Name="ticTacToeButton" Clicked="ticTacToeButton_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="ColorPicker" x:Name="colorPickerButton" Clicked="colorPickerButton_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="LabelEasterEgg" x:Name="labelTextEasterEgg" Clicked="labelTextEasterEgg_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="Einkaufsliste" x:Name="toDoListeButton" Clicked="toDoListeButton_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="DataBindings" x:Name="bindingTutorialButton" Clicked="bindingTutorialButton_Clicked"/>
+                <Button Grid.Row="4" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="Json" x:Name="jsonUebungButton" Clicked="jsonUebungButton_Clicked"/>
+                <Button Grid.Row="4" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="SQLite" x:Name="sqliteButton" Clicked="sqliteButton_Clicked"/>
+                <Button Grid.Row="5" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="BruttoNetto" x:Name="bruttoButton" Clicked="bruttoButton_Clicked"/>
+                <Button Grid.Row="5" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="IMDB" x:Name="OMDbButton" Clicked="OMDbButton_Clicked"/>
+                <Button Grid.Row="6" Grid.Column="0" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource SecColor}" Text="Texttospeech" x:Name="TxtToSpeechButton" Clicked="TxtToSpeechButton_Clicked"/>
+                <Button Grid.Row="6" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="Google Maps" x:Name="MapsButton" Clicked="MapsButton_Clicked"/>
+                <Button Grid.Row="6" Grid.Column="1" Style="{StaticResource ButtonStyleSetter}" BackgroundColor="{StaticResource MainColor}" Text="Bluetooth LE" x:Name="BluetoothButton" Clicked="BluetoothButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </Frame>
+
+</ContentPage>
